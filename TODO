@@ -1,0 +1,22 @@
+
+1. functions.cpp: Probably have a debug parameters should be cleaned out?
+./OraytaBase/functions.cpp:912: warning: unused parameter ‘pureTextOutPath’ [-Wunused-parameter]
+../Orayta-QT/OraytaBase/functions.cpp:912:52: warning: unused parameter ‘pureTextOutPath’ [-Wunused-parameter]
+  912 | void GenerateSearchTextDB(QString infile,  QString pureTextOutPath, QString levelMapOutPath)
+      |                                            ~~~~~~~~^~~~~~~~~~~~~~~
+
+./OraytaBase/functions.cpp:912: warning: unused parameter ‘levelMapOutPath’ [-Wunused-parameter]
+../Orayta-QT/OraytaBase/functions.cpp:912:77: warning: unused parameter ‘levelMapOutPath’ [-Wunused-parameter]
+  912 | void GenerateSearchTextDB(QString infile,  QString pureTextOutPath, QString levelMapOutPath)
+      |                                                                     ~~~~~~~~^~~~~~~~~~~~~~~
+
+2. bookiter.cpp: Paramter fromLevel is unsued seems to be an idea that never got implemented
+It is called only with paramater on htmlgen.cpp:1244
+keeping for now in order to maintain compatibility
+default value is = 0
+
+./OraytaBase/bookiter.cpp:127: warning: unused parameter ‘fromLevel’ [-Wunused-parameter]
+../Orayta-QT/OraytaBase/bookiter.cpp:127:39: warning: unused parameter ‘fromLevel’ [-Wunused-parameter]
+  127 | QString BookIter::toEncodedString(int fromLevel)
+      |                                   ~~~~^~~~~~~~~
+

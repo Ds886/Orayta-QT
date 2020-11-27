@@ -377,7 +377,7 @@ void DesktopApp::ClearTmp()
     }
 #ifndef POPPLER
     //remove all WKP.* files (because pdf plugin not cleaned)
-    dir = QDir::currentPath();
+    dir.setPath(QDir::currentPath());
     list = dir.entryList(QStringList("WKP.*"));
     for (int i=0; i<list.size(); i++)
     {
@@ -1061,7 +1061,7 @@ void DesktopApp::openCommentDialog(QString link)
     vector<QString>::iterator vitr = std::find(comment_titles.begin(), comment_titles.end(), link);
     int index = distance (comment_titles.begin (), vitr);
 
-    if (index != comment_titles.size())
+    if (static_cast<unsigned long>(index) != comment_titles.size())
     {
         previosComment = comment_texts[index];
     }
@@ -1090,7 +1090,7 @@ void DesktopApp::addCommentAtPosition(QString link, QString comment)
     int index = distance (comment_titles.begin (), vitr);
 
     //If it allready has a comment, rewrite the file without it
-    if (index != comment_titles.size())
+    if (static_cast<unsigned long>(index) != comment_titles.size())
     {
         comment_titles.erase( comment_titles.begin() + index);
         comment_texts.erase( comment_texts.begin() + index);
@@ -1886,7 +1886,7 @@ void DesktopApp::SearchGuematria (QString txt)
                 // search the guematria
                 int calc = bookGuematriaDb[j].values[0];
                 unsigned first = 0, last = 0;
-                while ( last < bookGuematriaDb[j].values.size() )
+                while ( last < unsigned(bookGuematriaDb[j].values.size()) )
                 {
                     if (calc == guematria)
                     {
@@ -1913,14 +1913,14 @@ void DesktopApp::SearchGuematria (QString txt)
                         Html += "<br><br>\n";
 
                         last = ++first;
-                        if (last < bookGuematriaDb[j].values.size())
+                        if (last < unsigned(bookGuematriaDb[j].values.size()))
                             calc = bookGuematriaDb[j].values[first];
                     }
 
                     while (calc < guematria)
                     {
                         last++;
-                        if (last < bookGuematriaDb[j].values.size())
+                        if (last < unsigned(bookGuematriaDb[j].values.size()))
                             calc += bookGuematriaDb[j].values[last];
                         else
                             break;

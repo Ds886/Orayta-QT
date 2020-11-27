@@ -227,7 +227,7 @@ int main(int argc, char *argv[])
             lvlmapoutpath = pt.replace(".TXT", ".LMP");
             dboutpath = pt.replace(".LMP", ".TDB");
         }
-        GenerateSearchTextDB(path, dboutpath, lvlmapoutpath);
+        GenerateSearchTextDB(path);
 
         return 0;
     }

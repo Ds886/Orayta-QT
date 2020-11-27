@@ -1,0 +1,64 @@
+&MixedDisplay=2&LastLevelIndex=1&CosmeticsType=#bp=<span style='line-height:120%'>#nik=1#rnft=2#sem=0#is2=13#is3=20#ip2=<img  alt=''''  src='..\pics\dot.bmp''>_nbsp_nbsp#ip4=<BR>_nbsp;_nbsp;#ix4=<BR>#sil=4#bs1=22#bs4=24#pr1=<br style='line-height:8px;'>#pr2=<BR><HR><BR>#pr4=<BR><HR><BR><center>#su2=<div style='margin:20px;'> </div>#su4=</center>#mxp=2#rep=.=.<SPACE>#rep2=<NOBOOK>=<br><br><br><center><span style='font-size:20px;'>ספר זה אינו מסופק ביחד עם המאגר <BR><BR>אך ניתן להורידו באמצעות מנהל ההורדות של המאגר<BR><BR>לשם כך לחץ על השורה הכתומה למעלה</span><BR><a href=''#show_help=horadot!''> להצגת הסבר מפורט בנושא זה לחץ כאן </a></center>#download=1&RavMechaber=גדולי ישראל זיע"א&HiddenFromIndex=&TextSource=ויקיטקסט&UniqueId=5001&GroupId=tur1
+
+$ טור - אורח חיים
+
+[General]
+FilesNumber=6						// nubmer of files and columns
+CommonPrefix=""
+CommonSuffix=""
+CommonMiddle="<p>"
+
+
+[File1]
+Title="טור"
+FileName="100_tur_orach_chaiim_tur.txt"		// in current folder
+Prefix="<span style='font-size:80%;'>"		// new 2017
+Suffix="</span>"				// new 2017
+Zoom=137			// 0 -user control
+SmallFactor=0		// number of small command to add before
+
+[File2]
+Title="בית יוסף"
+FileName="101_tur_orach_chaiim_beit_yosef.txt"		// in current folder
+Prefix="<p><span style='font-size:65%;'>"
+Suffix="</span><br>"
+SmallFactor=0		// number of small command to add before
+Protected=0
+Reshape=1		// 0 - null  1 - Remove Ole Text
+
+
+[File3]
+Title="בית חדש"
+FileName="102_tur_orach_chaiim_bach.txt"		// in current folder
+Prefix="<p><span style='font-size:65%;'>"
+Suffix="</span><br>"
+SmallFactor=0		// number of small command to add before
+Protected=0
+Reshape=1		// 0 - null  1 - Remove Ole Text
+
+[File4]
+Title="דרכי משה"
+FileName="103_tur_orach_chaiim_darkei_moshe.txt"		// in current folder
+Prefix="<p><span style='font-size:65%;'>"
+Suffix="</span><br>"
+SmallFactor=0		// number of small command to add before
+Protected=0
+Reshape=1		// 0 - null  1 - Remove Ole Text
+
+[File5]
+Title="דרישה"
+FileName="104_tur_orach_chaiim_drisha.txt"		// in current folder
+Prefix="<p><span style='font-size:65%;'>"
+Suffix="</span><br>"
+SmallFactor=0		// number of small command to add before
+Protected=0
+Reshape=1		// 0 - null  1 - Remove Ole Text
+
+[File6]
+Title="פרישה"
+FileName="105_tur_orach_chaiim_prisha.txt"		// in current folder
+Prefix="<p><span style='font-size:65%;'>"
+Suffix="</span><br>"
+SmallFactor=0		// number of small command to add before
+Protected=0
+Reshape=1		// 0 - null  1 - Remove Ole Text

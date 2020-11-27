@@ -46,7 +46,7 @@ else: win32{
     QT += webkitwidgets printsupport webkit
     
     # install fonts
-    #fonts.path = $${INSTALL_PATH}"fonts/"
+    #fonts.paorign local fodlerth = $${INSTALL_PATH}"fonts/"
     fonts.path = $${INSTALL_PATH}
     fonts.files = fonts/.
 
@@ -90,6 +90,11 @@ poppler {
 }
 
 SOURCES +=  \
+    OraytaBase/quazip/quachecksum32.cpp \
+    OraytaBase/quazip/quagzipfile.cpp \
+    OraytaBase/quazip/quaziodevice.cpp \
+    OraytaBase/quazip/quazipdir.cpp \
+    OraytaBase/quazip/quazipfileinfo.cpp \
     main.cpp \
     OraytaBase/booklist.cpp \
     OraytaBase/bookfind.cpp \
@@ -122,6 +127,12 @@ HEADERS += \
     OraytaBase/booklist.h \
     OraytaBase/bookfind.h \
     OraytaBase/guematria.h \
+    OraytaBase/quazip/crypt.h \
+    OraytaBase/quazip/minizip_crypt.h \
+    OraytaBase/quazip/quagzipfile.h \
+    OraytaBase/quazip/quaziodevice.h \
+    OraytaBase/quazip/quazip_qt_compat.h \
+    OraytaBase/quazip/quazipdir.h \
     OraytaBase/search.h \
     OraytaBase/quazip/quazip.h \
     OraytaBase/quazip/zip.h \
@@ -284,6 +295,11 @@ ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android-orayta
 
 
 DISTFILES += \
+    OraytaBase/quazip/1.patch \
+    OraytaBase/quazip/CMakeLists.txt \
+    OraytaBase/quazip/QuaZipConfig.cmake.in \
+    OraytaBase/quazip/quazip.pc.cmakein \
+    TODO \
     android-orayta/AndroidManifest.xml \
     android-orayta/res/values/libs.xml \
     android-orayta/build.gradle \

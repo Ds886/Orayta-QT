@@ -1,0 +1,65 @@
+&MixedDisplay=2&LastLevelIndex=1&CosmeticsType==5001&RavMechaber=גדולי ישראל זיע"א&HiddenFromIndex=&TextSource=ויקיטקסט&UniqueId=5004&GroupId=tur4
+
+$ טור - חשן משפט
+
+[General]
+FilesNumber=6						// nubmer of files and columns
+CommonPrefix=""
+CommonSuffix=""
+CommonMiddle="<p>"
+
+
+
+[File1]
+Title="טור"
+FileName="160_tur_choshen_mishpat_tur.txt"		// in current folder
+Prefix="<span style='font-size:80%;'>"		// new 2017
+Suffix="</span>"				// new 2017
+Zoom=137			// 0 -user control
+SmallFactor=0		// number of small command to add before
+
+[File2]
+Title="בית יוסף"
+FileName="161_tur_choshen_mishpat_beit_yosef.txt"		// in current folder
+Prefix="<p><span style='font-size:65%;'>"
+Suffix="</span><br>"
+SmallFactor=0		// number of small command to add before
+Protected=0
+Reshape=1		// 0 - null  1 - Remove Ole Text
+
+
+[File3]
+Title="בית חדש"
+FileName="162_tur_choshen_mishpat_bach.txt"		// in current folder
+Prefix="<p><span style='font-size:65%;'>"
+Suffix="</span><br>"
+SmallFactor=0		// number of small command to add before
+Protected=0
+Reshape=1		// 0 - null  1 - Remove Ole Text
+
+[File4]
+Title="דרכי משה"
+FileName="163_tur_choshen_mishpat_darkei_moshe.txt"		// in current folder
+Prefix="<p><span style='font-size:65%;'>"
+Suffix="</span><br>"
+SmallFactor=0		// number of small command to add before
+Protected=0
+Reshape=1		// 0 - null  1 - Remove Ole Text
+
+[File5]
+Title="דרישה"
+FileName="164_tur_choshen_mishpat_drisha.txt"		// in current folder
+Prefix="<p><span style='font-size:65%;'>"
+Suffix="</span><br>"
+SmallFactor=0		// number of small command to add before
+Protected=0
+Reshape=1		// 0 - null  1 - Remove Ole Text
+
+[File6]
+Title="פרישה"
+FileName="165_tur_choshen_mishpat_prisha.txt"		// in current folder
+Prefix="<p><span style='font-size:65%;'>"
+Suffix="</span><br>"
+SmallFactor=0		// number of small command to add before
+Protected=0
+Reshape=1		// 0 - null  1 - Remove Ole Text
