@@ -29,7 +29,7 @@
 
 QString createSearchPattern (QString userInput, bool allWords, bool fullWords, int spacing)
 {
-    QStringList words = userInput.split(" ", QString::SkipEmptyParts);
+    QStringList words = userInput.split(" ", Qt::SplitBehavior(Qt::SplitBehaviorFlags::SkipEmptyParts));
     QString pattern;
 
     if (!fullWords)

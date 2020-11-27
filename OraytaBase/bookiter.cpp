@@ -57,8 +57,8 @@ bool BookIter::operator==(const BookIter& other)
 
         //New experimental thingy. If we reached a non-important level, then ignore it.
         //This could be a great hack to solve the parashah problems
-        //if (a != "") hadValue = true;
-        //if (a == "") if (hadValue) break;
+        if (a != "") hadValue = true;
+        if (a == "") if (hadValue) break;
 
         if ( a != b)
             return false;
@@ -122,9 +122,16 @@ QString BookIter::toString(int fromLevel)
     return s;
 }
 
-//Returns a full representation of the bookiter,
-// in a way it could be reconstructed from it.
-QString BookIter::toEncodedString(int fromLevel)
+/*Returns a full representation of the bookiter,
+ in a way it could be reconstructed from it.
+
+ Ds886: not sure what the use for the paramater
+ It is called only with paramater on htmlgen.cpp:1244
+ keeping for now in order to maintain compatibility
+ default value is = 0
+*/
+
+QString BookIter::toEncodedString()
 {
     QString s = this->toString();
 

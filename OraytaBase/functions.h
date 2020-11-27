@@ -181,7 +181,7 @@ void copyFolder(QString sourceFolder, QString destFolder, QStringList fileNameFi
 void deleteBooksFolder(QString sourceFolder);
 
 //Generate search DB files from the given bookflie (Non-compressed)
-void GenerateSearchTextDB(QString infile,  QString pureTextOutPath, QString levelMapOutPath);
+void GenerateSearchTextDB(QString infile);
 
 void initCrypterRequest();
 bool isKukaytaInstalled();

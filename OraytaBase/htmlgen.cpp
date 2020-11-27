@@ -211,7 +211,7 @@ QString index_to_index(QList <IndexItem> indexitemlist,int level)
     int indexcount = 0;
 
     str += "<center> &nbsp; <span class=\"VerySmall\">";
-    for(unsigned int i=0; i<indexitemlist.size(); i++)
+    for(unsigned int i=0; i<unsigned(indexitemlist.size()); i++)
     {
         if(indexitemlist[i].level == level)
         {
@@ -411,8 +411,6 @@ QString Script()
 //Returns the Html code for the given external link
 QString ExternalLink (QString linkcode)
 {
-    bool ToraOr;
-    bool ShouldBePrintedOnNewLine;
     //UniqueId of target link
     int  BookUniqueId = 0;
     //Label within the target book
@@ -427,23 +425,10 @@ QString ExternalLink (QString linkcode)
         return "";
 
     //Check type
-    if (linkcode[6] == 'a')
+    if (linkcode[6] != 'a' && linkcode[6] != 'b' && linkcode[6] != 'c')
     {
-        ToraOr = false;
-        ShouldBePrintedOnNewLine = false;
-    }
-    else if (linkcode[6] == 'b')
-    {
-        ToraOr = false;
-        ShouldBePrintedOnNewLine = true;
-    }
-    else if (linkcode[6] == 'c')
-    {
-        ToraOr = true;
-        ShouldBePrintedOnNewLine = false;
-    }
-    else
         return "";
+    }
 
     //Find location of "-->"
     size_t ptr = linkcode.indexOf("-->");
@@ -800,7 +785,7 @@ QString html_link_table(QList <IndexItem> indexitemlist, int short_index_level, 
     bool haslevel[4]={false};
 
 
-    for (unsigned int i=0; i<indexitemlist.size(); i++)
+    for (unsigned int i=0; i<unsigned(indexitemlist.size()); i++)
     {
         if (indexitemlist[i].level == 2)
             haslevel[0] = true;
@@ -831,7 +816,7 @@ QString html_link_table(QList <IndexItem> indexitemlist, int short_index_level, 
     if ( higherLevel == 6)
     {
         link_table += "<span class=\"L0\">&nbsp;";
-        for (unsigned int j=0; j<indexitemlist.size(); j++)
+        for (unsigned int j=0; j<(unsigned int)indexitemlist.size(); j++)
         {
             link_table += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
             link_table += bluedot() + "&nbsp;";
@@ -848,9 +833,9 @@ QString html_link_table(QList <IndexItem> indexitemlist, int short_index_level, 
     // and the higher one(s) get a <P> before them.
     else
     {
-        for (unsigned int j=0; j<indexitemlist.size(); j++)
+        for (unsigned int j=0; j<unsigned(indexitemlist.size()); j++)
         {
-            if (opentable && indexitemlist[j].level >= higherLevel)
+            if (opentable && unsigned(indexitemlist[j].level) >= higherLevel)
             {
                 link_table += "<P></td></tr></tbody></table>";
                 opentable = false;
@@ -864,14 +849,14 @@ QString html_link_table(QList <IndexItem> indexitemlist, int short_index_level, 
             }
 
             //Higher than one above the lowest
-            if (indexitemlist[j].level > higherLevel)
+            if (unsigned(indexitemlist[j].level) > higherLevel)
             {
                 link_table += "<P><span class=\"L1\">&nbsp;";
 
                 link_table += genLink(indexitemlist[j].linkPoint, indexitemlist[j].displayText);
                 link_table += "</span>\n";
             }
-            else if (indexitemlist[j].level == higherLevel)
+            else if (unsigned(indexitemlist[j].level) == higherLevel)
             {
                 link_table += "<span class=\"L0\">&nbsp;";
 
@@ -1241,7 +1226,7 @@ QUrl Book::renderChapterHtml(BookIter iter, BookList * booklist, bool shownikud,
 
             if (Sources[0].itr.humanDisplay().indexOf("EOF") == -1)
             {
-                QString strforlink = Sources[0].itr.toEncodedString(level + 1);
+                QString strforlink = Sources[0].itr.toEncodedString();
 
                 if (!PutNewLinesAsIs||level>0)
                     html+="<BR>";

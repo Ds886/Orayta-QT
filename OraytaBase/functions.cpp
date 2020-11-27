@@ -908,8 +908,10 @@ void deleteBooksFolder(QString sourceFolder)
 
 
 #include "bookiter.h"
-
-void GenerateSearchTextDB(QString infile,  QString pureTextOutPath, QString levelMapOutPath)
+/*
+  Ds886: QString pureTextOutPath, QString levelMapOutPath are commented out possibly
+ */
+void GenerateSearchTextDB(QString infile)
 {
     //TODO: remove references to other books
     //TODO: Html books too
@@ -996,9 +998,7 @@ void GenerateSearchTextDB(QString infile,  QString pureTextOutPath, QString leve
     {
         lvlmpstr += QString::number(keys[i]) + "->" + vals[i].toString() + "\n";
     }
-    //Save the files
-//    writetofile(pureTextOutPath, ptext, "UTF-8", true);
-//    writetofile(levelMapOutPath, lvlmpstr, "UTF-8", true);
+
 
     //IZAR: create OBK -----------------------
     QString outZipPath= infile.replace(QRegExp("\\.(txt|TXT)$"), ".obk");

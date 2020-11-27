@@ -331,7 +331,7 @@ void BookList::AddBookConfs(Book *book, QList<QString> text)
             srcLst = srcLst.mid(srcLst.indexOf("(") + 1);
             srcLst = srcLst.mid(0, srcLst.indexOf(")"));
             QList<int> wsrc;
-            QStringList srcId = srcLst.split(',', QString::SkipEmptyParts);
+            QStringList srcId = srcLst.split(',', Qt::SplitBehavior(0x1));
 
             for (QStringList::const_iterator it = srcId.begin(); it != srcId.end(); ++it)
             {

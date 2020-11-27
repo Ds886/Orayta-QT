@@ -68,7 +68,7 @@ public:
 
     //Returns a full representation of the bookiter,
     // in a way it could be reconstructed from it.
-    QString toEncodedString(int fromLevel = 0);
+    QString toEncodedString();
 
     //Return a BookIter from the given 'itr.toString()' string
     static BookIter fromString(QString);
